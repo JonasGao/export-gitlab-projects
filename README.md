@@ -1,2 +1,2 @@
-# export-gitlab-projects
-Export gitlab projects by REST API
+# Export GitLab Projects
+Do export gitlab projects by REST API.
