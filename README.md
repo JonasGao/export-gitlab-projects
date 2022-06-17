@@ -1,2 +1,2 @@
 # Export GitLab Projects
-Do export gitlab projects by REST API.
+A python script do that exporting gitlab projects by REST API.
