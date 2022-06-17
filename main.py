@@ -31,13 +31,13 @@ def write_project(projects, ws):
     for proj in projects:
         namespace = proj['namespace']
         group_name = namespace['name']
-        ws.append([proj['id'], proj['name'], group_name, proj['description'], proj['http_url_to_repo']])
+        ws.append([proj['id'], proj['name'], proj['path'], group_name, proj['description'], proj['http_url_to_repo']])
 
 
 def main():
     wb = Workbook()
     ws = wb.active
-    ws.append(['id', 'name', 'group', 'description', 'http_url_to_repo'])
+    ws.append(['id', 'name', 'path', 'group', 'description', 'http_url_to_repo'])
     url = "/api/v4/projects?pagination=keyset&per_page=50&order_by=id&sort=asc"
     json_obj, next_url = req(url)
     write_project(json_obj, ws)
@@ -49,4 +49,3 @@ def main():
 
 if __name__ == '__main__':
     main()
-
